@@ -16,6 +16,9 @@
     "require": {
         "ezsystems/ezpublish-legacy-installer": "*"
     },
+    "replace": {
+        "netgen/ngsymfonytools": "*"
+    },
     "extra": {
         "ezpublish-legacy-extension-name": "ngsymfonytools"
     }
