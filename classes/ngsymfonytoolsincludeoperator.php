@@ -81,7 +81,7 @@ class NgSymfonyToolsIncludeOperator
         }
 
         $serviceContainer = ezpKernel::instance()->getServiceContainer();
-        $templatingEngine = $serviceContainer->get( 'templating' );
+        $templatingEngine = $serviceContainer->get( 'twig' );
         $operatorValue = $templatingEngine->render( $templateName, $templateParameters );
     }
 }
