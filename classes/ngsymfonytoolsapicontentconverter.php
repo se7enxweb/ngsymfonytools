@@ -1,5 +1,14 @@
 <?php
 
+// Ibexa DXP 5.0 moved the Repository interface to the Ibexa namespace.
+// Accept either the legacy eZ alias or the new Ibexa interface so the class
+// works regardless of which namespace is resolved at runtime.
+if ( interface_exists( 'Ibexa\Contracts\Core\Repository\Repository', true )
+    && !interface_exists( 'eZ\Publish\API\Repository\Repository', true ) )
+{
+    class_alias( 'Ibexa\Contracts\Core\Repository\Repository', 'eZ\Publish\API\Repository\Repository' );
+}
+
 use \eZ\Publish\API\Repository\Repository;
 
 class NgSymfonyToolsApiContentConverter
