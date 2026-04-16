@@ -81,7 +81,8 @@ class NgSymfonyToolsIncludeOperator
         }
 
         $serviceContainer = ezpKernel::instance()->getServiceContainer();
-        $templatingEngine = $serviceContainer->get( 'twig' );
+        // Symfony 5+ removed the 'twig' string alias — use the class name directly.
+        $templatingEngine = $serviceContainer->get( \Twig\Environment::class );
         $operatorValue = $templatingEngine->render( $templateName, $templateParameters );
     }
 }
