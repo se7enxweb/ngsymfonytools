@@ -2,3 +2,5 @@
 
 [TemplateSettings]
 ExtensionAutoloadPath[]=ngsymfonytools
+
+*/ ?>
